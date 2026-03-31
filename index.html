@@ -677,6 +677,233 @@ body::after {
   background: var(--green);
   box-shadow: 0 0 6px var(--green);
 }
+
+/* ══════════════════════════════
+   RESPONSIVE MÓVIL
+══════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Body / overflow ── */
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* ── Slides: stack vertical, scroll libre ── */
+  .slide {
+    position: relative;
+    min-height: 100vh;
+    padding: 1rem !important;
+    gap: 0.75rem !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  /* Ocultar slides inactivos */
+  .slide:not(.active) {
+    display: none !important;
+  }
+
+  /* ── Slide principal ── */
+  #slide-main {
+    padding: 1rem 0.75rem !important;
+    align-items: center;
+  }
+  .top-bar {
+    font-size: clamp(1.1rem, 6vw, 1.5rem) !important;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+  .machine-wrap svg {
+    width: clamp(260px, 88vw, 380px) !important;
+  }
+  .main-ecograf-img {
+    width: clamp(260px, 88vw, 380px) !important;
+  }
+  .hotspot {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.7rem !important;
+  }
+  .hint-bottom {
+    font-size: 0.55rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* ── Slide monitor ── */
+  #slide-monitor {
+    padding: 1rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  .monitor-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .monitor-title-box h2 {
+    font-size: clamp(0.95rem, 5vw, 1.2rem) !important;
+  }
+  .monitor-body {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  .monitor-imgs {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .monitor-imgs .img-card {
+    flex: 1 1 45%;
+    min-width: 130px;
+  }
+  .monitor-imgs .img-card img {
+    height: 90px !important;
+  }
+  .monitor-connector {
+    display: none;
+  }
+  .monitor-text-box {
+    padding: 0.75rem 0.9rem !important;
+  }
+  .monitor-text-box p {
+    font-size: 0.78rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ── Slide controles ── */
+  #slide-controls {
+    padding: 1rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ── Slide computadora ── */
+  #slide-computer {
+    padding: 1rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ── Slide transductor ── */
+  #slide-transductor {
+    padding: 1rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  .trans-body {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  .trans-imgs {
+    flex: unset !important;
+    width: 100%;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .trans-imgs .img-card {
+    flex: 1 1 45%;
+    min-width: 130px;
+  }
+  .trans-imgs .img-card img {
+    height: 90px !important;
+  }
+  .trans-texts {
+    width: 100%;
+  }
+  .trans-chips {
+    flex-direction: column !important;
+    gap: 0.45rem !important;
+  }
+  .trans-chip {
+    width: 100% !important;
+  }
+
+  /* ── Slide mapa conceptual ── */
+  #slide-comp {
+    padding: 1rem 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  .comp-header {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: flex-start;
+  }
+  .comp-title-box h2 {
+    font-size: clamp(0.95rem, 5vw, 1.2rem) !important;
+  }
+  .comp-icon-big {
+    font-size: 2rem !important;
+  }
+  .concept-map {
+    gap: 0.6rem !important;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+  .ccard {
+    padding: 0.7rem 0.8rem !important;
+  }
+  .ccard .ctitle {
+    font-size: 0.75rem !important;
+  }
+  .ccard .cdesc {
+    font-size: 0.68rem !important;
+  }
+  .desc-box {
+    font-size: 0.75rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ── Imagen glow wrap ── */
+  .img-glow-wrap {
+    max-width: 88vw;
+  }
+
+  /* ── Botón volver ── */
+  .btn-back {
+    font-size: 0.7rem !important;
+    padding: 0.4rem 0.75rem !important;
+  }
+
+  /* ── Chips comp3 ── */
+  .comp3-chips-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+  .comp3-chip {
+    padding: 0.55rem 0.65rem !important;
+  }
+  .comp3-chip .chip-title {
+    font-size: 0.7rem !important;
+  }
+  .comp3-chip .chip-desc {
+    font-size: 0.62rem !important;
+  }
+
+  /* ── Monitor text box dentro de slides secundarios ── */
+  .monitor-text-box .mtb-tag {
+    font-size: 0.5rem !important;
+  }
+}
+
+/* ── Extra pequeño (< 400 px) ── */
+@media (max-width: 400px) {
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .monitor-imgs .img-card,
+  .trans-imgs .img-card {
+    flex: 1 1 100%;
+  }
+  .comp3-chips-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hotspot {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -919,6 +1146,14 @@ function goBack() {
 document.querySelectorAll('.hotspot').forEach(btn => {
   btn.addEventListener('click', () => goTo(parseInt(btn.dataset.id)));
 });
+
+// Móvil: scroll al inicio al cambiar de slide
+(function() {
+  const _goTo = goTo;
+  const _goBack = goBack;
+  goTo = function(id) { _goTo(id); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  goBack = function() { _goBack(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+})();
 </script>
 
 
